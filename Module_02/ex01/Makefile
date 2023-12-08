@@ -2,7 +2,7 @@
 NAME     := firstclasse
 
 # Sources and objects.
-SRCS     := main.cpp
+SRCS     := main.cpp Fixed.cpp
 OBJS     := $(SRCS:.cpp=.o)
 
 # Define all the compiling flags.

@@ -21,7 +21,7 @@ class Fixed{
 
     private:
         int _fixe;
-        static int const _frac = 0;
+        static int const _frac = 8;
 };
 
 #endif
