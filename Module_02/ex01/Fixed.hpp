@@ -14,14 +14,22 @@ class Fixed{
         //destructeur
         ~Fixed( void );
 
-        //accesseur ?
-
+        //00
         int getRawBits(void) const;
         void setRawBits(int const raw);
+
+        //01
+        Fixed( int const ci );
+        Fixed( float const cf);
+        float toFloat( void ) const;
+        int toINt( void ) const;
+
 
     private:
         int _fixe;
         static int const _frac = 0;
 };
+
+std::ostream & operator<<( std::ostream & o, Fixed const & fix);
 
 #endif
