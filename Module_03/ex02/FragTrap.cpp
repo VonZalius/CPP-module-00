@@ -20,6 +20,24 @@ FragTrap::FragTrap( std::string name)
     std::cout << "  ->debug : FragTrap : Constructor Init called" << std::endl;
 }
 
+//constructeur recopie
+FragTrap::FragTrap( FragTrap const & src ) : ClapTrap(src)
+{
+    *this = src;
+    std::cout << "  ->debug : FragTrap : Constructor Copy called" << std::endl;
+    return;
+}
+
+//operateur d'affectation
+FragTrap & FragTrap::operator=( FragTrap const & src )
+{
+    this->_name = src._name;
+    this->_Hit = src._Hit;
+    this->_Energy = src._Energy;
+    this->_Attack = src._Attack;
+    return *this;
+}
+
 //destructeur
 FragTrap::~FragTrap( void )
 {

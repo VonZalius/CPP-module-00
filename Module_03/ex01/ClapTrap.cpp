@@ -12,6 +12,24 @@ ClapTrap::ClapTrap( std::string name): _name(name), _Hit(10), _Energy(10), _Atta
     std::cout << "  ->debug : Constructor Init called" << std::endl;
 }
 
+//constructeur recopie
+ClapTrap::ClapTrap( ClapTrap const & src )
+{
+    *this = src;
+    std::cout << "  ->debug : Constructor Copy called" << std::endl;
+    return;
+}
+
+//operateur d'affectation
+ClapTrap & ClapTrap::operator=( ClapTrap const & src )
+{
+    this->_name = src._name;
+    this->_Hit = src._Hit;
+    this->_Energy = src._Energy;
+    this->_Attack = src._Attack;
+    return *this;
+}
+
 //destructeur
 ClapTrap::~ClapTrap( void )
 {

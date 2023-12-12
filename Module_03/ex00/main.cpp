@@ -5,13 +5,13 @@
 int main() {
 	ClapTrap *c1 = new ClapTrap();
 	ClapTrap *c2 = new ClapTrap("Zoro");
-	//ClapTrap *c3 = new ClapTrap(*c1);
+	ClapTrap *c3 = new ClapTrap(*c2);
 
 	std::cout << std::endl;
 
 	c1->attack("Slime");
 	c2->attack("Sanji");
-	//c3->attack("Slime shiny");
+	c3->attack("Slime shiny");
 
 	std::cout << std::endl;
 
@@ -19,7 +19,7 @@ int main() {
 	c2->takeDamage(5);
 	c2->takeDamage(5);
 	c2->takeDamage(5);
-	//c3->takeDamage(5);
+	c3->takeDamage(5);
 
 	std::cout << std::endl;
 
@@ -34,11 +34,11 @@ int main() {
 	c2->beRepaired(1);
 	c2->beRepaired(1);
 	c2->beRepaired(1);
-	//c3->beRepaired(5);
+	c3->beRepaired(5);
 
 	std::cout << std::endl;
 
 	delete c1;
 	delete c2;
-	//delete c3;
+	delete c3;
 }

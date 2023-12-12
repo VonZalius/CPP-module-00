@@ -10,9 +10,9 @@ class ClapTrap{
         //constructeur avec init
         ClapTrap( std::string name);
         //constructeur recopie
-        //ClapTrap( ClapTrap const & src );
+        ClapTrap( ClapTrap const & src );
         //operateur d'affectation
-        //ClapTrap & operator=( ClapTrap const & rhs );
+        ClapTrap & operator=( ClapTrap const & rhs );
         //destructeur
         ~ClapTrap( void );
 

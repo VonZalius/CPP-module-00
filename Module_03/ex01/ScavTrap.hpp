@@ -1,4 +1,8 @@
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
+#include <iostream>
 
 class ScavTrap : public ClapTrap{
     public:
@@ -7,12 +11,14 @@ class ScavTrap : public ClapTrap{
         //constructeur avec init
         ScavTrap( std::string name);
         //constructeur recopie
-        //ClapTrap( ClapTrap const & src );
+        ScavTrap( ScavTrap const & src );
         //operateur d'affectation
-        //ClapTrap & operator=( ClapTrap const & rhs );
+        ScavTrap & operator=( ScavTrap const & rhs );
         //destructeur
         ~ScavTrap( void );
 
         //ex01
         void guardGate();
 };
+
+#endif
