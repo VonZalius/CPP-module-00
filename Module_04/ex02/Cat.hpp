@@ -1,0 +1,28 @@
+#ifndef CAT_HPP
+# define CAT_HPP
+
+#include "Brain.hpp"
+#include "A_Animal.hpp"
+#include <iostream>
+#include <string>
+
+class Cat : public A_Animal{
+    public:
+        //constructeur
+        Cat( void );
+        //constructeur recopie
+        Cat( Cat const & src );
+        //operateur d'affectation
+        Cat & operator=( Cat const & rhs );
+        //destructeur
+        ~Cat( void );
+
+        //ex00
+        std::string getType() const;
+        void makeSound() const;
+    
+    private:
+        Brain* brain;
+};
+
+#endif
