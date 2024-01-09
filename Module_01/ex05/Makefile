@@ -1,8 +1,8 @@
 # Name of the program.
-NAME     := BRAIN
+NAME     := Harl
 
 # Sources and objects.
-SRCS     := main.cpp
+SRCS     := main.cpp Harl.cpp
 OBJS     := $(SRCS:.cpp=.o)
 
 # Define all the compiling flags.

@@ -1,8 +1,8 @@
 # Name of the program.
-NAME     := BRAIN
+NAME     := SedV2
 
 # Sources and objects.
-SRCS     := main.cpp
+SRCS     := main.cpp SedV2.cpp
 OBJS     := $(SRCS:.cpp=.o)
 
 # Define all the compiling flags.
