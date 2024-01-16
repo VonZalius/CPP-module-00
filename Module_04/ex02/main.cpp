@@ -61,5 +61,5 @@ std::cout << std::endl;
 delete Bisteca;
 delete Junim;
 
-return EXIT_SUCCESS; 
+return 0; 
 }
