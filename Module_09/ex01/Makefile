@@ -1,8 +1,8 @@
 # Name of the program.
-NAME     := btc
+NAME     := RPN
 
 # Sources and objects.
-SRCS     := main.cpp BitcoinExchange.cpp
+SRCS     := main.cpp RPN.cpp
 OBJS     := $(SRCS:.cpp=.o)
 
 # Define all the compiling flags.
