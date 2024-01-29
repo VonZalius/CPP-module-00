@@ -9,7 +9,7 @@ int main(void)
 {
     try
     {
-        Bureaucrat  *bureaucrat = new Bureaucrat("Bureaucrat", 40);
+        Bureaucrat  *bureaucrat = new Bureaucrat("Bureaucrat", 25);
         A_Form        *form = new PresidentialPardonForm("Form");
         A_Form        *form2 = new RobotomyRequestForm("Form2");
         A_Form        *form3 = new ShrubberyCreationForm("Chajarat_l3a2ila");

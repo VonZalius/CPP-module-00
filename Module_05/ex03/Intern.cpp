@@ -17,8 +17,9 @@ Intern::Intern( Intern const & src )
 Intern & Intern::operator=( Intern const & rhs )
 {
     //il faud bien ca pour la forme canonique !
-    *this = rhs;
-    return (*this);
+    if (this == &rhs)
+        return *this;
+	return *this;
 }
 
 //destructeur

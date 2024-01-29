@@ -4,7 +4,7 @@ int main(void)
 {
     try
     {
-        Bureaucrat b("Bureaucrat", 1);
+        Bureaucrat b("Bureaucrat", 2);
         try
         {
             b.increment_grade();

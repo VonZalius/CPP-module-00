@@ -1,5 +1,5 @@
 # Name of the program.
-NAME     := Form
+NAME     := A_Form
 
 # Sources and objects.
 SRCS     := main.cpp Bureaucrat.cpp A_Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
