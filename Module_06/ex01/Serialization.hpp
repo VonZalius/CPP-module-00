@@ -9,10 +9,6 @@
 
 class Serialization{
     public:
-        //constructeur
-        Serialization();
-        //constructeur recopie
-        Serialization( Serialization const & src );
         //operateur d'affectation
         Serialization & operator=( Serialization const & rhs );
         //destructeur
@@ -22,6 +18,10 @@ class Serialization{
         static Data* deserialize(uintptr_t raw);
 
     private:
+        //constructeur
+        Serialization();
+        //constructeur recopie
+        Serialization( Serialization const & src );
 };
 
 #endif

@@ -17,8 +17,9 @@ ScalarConverter::ScalarConverter( ScalarConverter const & src )
 ScalarConverter & ScalarConverter::operator=( ScalarConverter const & rhs )
 {
     //il faud bien ca pour la forme canonique !
-    *this = rhs;
-    return (*this);
+    if (this == &rhs)
+        return *this;
+	return *this;
 }
 
 //destructeur

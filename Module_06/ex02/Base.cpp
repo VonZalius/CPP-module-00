@@ -2,7 +2,6 @@
 
 Base *Base::generate(void)
 {
-    srand(time(0));
     if(rand() % 3 == 0)
     {
         std::cout << "A created" << std::endl;
@@ -38,9 +37,8 @@ void Base::identify(Base& p)
     int i = 0;
     try
     {
-        dynamic_cast<A&>(p);
+        A testa = dynamic_cast<A&>(p);
         std::cout << "That is a A" << std::endl;
-
     }
     catch(const std::exception& e)
     {
@@ -48,7 +46,7 @@ void Base::identify(Base& p)
     }
     try
     {
-        dynamic_cast<B&>(p);
+        B testb = dynamic_cast<B&>(p);
         std::cout << "That is a B" << std::endl;
     }
     catch(const std::exception& e)
@@ -57,7 +55,7 @@ void Base::identify(Base& p)
     }
     try
     {
-        dynamic_cast<C&>(p);
+        C testc = dynamic_cast<C&>(p);
         std::cout << "That is a C" << std::endl;
     }
     catch(const std::exception& e)
