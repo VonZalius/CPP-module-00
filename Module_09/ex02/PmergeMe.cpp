@@ -31,8 +31,9 @@ PmergeMe::PmergeMe( PmergeMe const & src )
 //operateur d'affectation
 PmergeMe & PmergeMe::operator=( PmergeMe const & rhs )
 {
-    *this = rhs;
-    return (*this);
+    if (this == &rhs)
+        return *this;
+	return *this;
 }
 
 //destructeur

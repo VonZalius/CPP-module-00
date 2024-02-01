@@ -42,8 +42,9 @@ BitcoinExchange::BitcoinExchange( BitcoinExchange const & src )
 //operateur d'affectation
 BitcoinExchange & BitcoinExchange::operator=( BitcoinExchange const & rhs )
 {
-    *this = rhs;
-    return (*this);
+    if (this == &rhs)
+        return *this;
+	return *this;
 }
 
 //destructeur

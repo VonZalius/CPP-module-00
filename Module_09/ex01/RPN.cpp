@@ -16,8 +16,9 @@ RPN::RPN( RPN const & src )
 //operateur d'affectation
 RPN & RPN::operator=( RPN const & rhs )
 {
-    *this = rhs;
-    return (*this);
+    if (this == &rhs)
+        return *this;
+	return *this;
 }
 
 //destructeur
