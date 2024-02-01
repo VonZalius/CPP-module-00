@@ -2,11 +2,11 @@
 
 int main(void)
 {
-    Array<int> a(51);
+    Array<int> a(50);
     
     try
     {
-        a[6] = 8;
+        a[5] = 42;
         std::cout << a[5] << std::endl;
         std::cout << a[50] << std::endl;
     }

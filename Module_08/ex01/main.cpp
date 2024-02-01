@@ -11,6 +11,9 @@ int main()
         sp.addNumber(9);
         sp.addNumber(11);
 
+        std::cout << sp.shortestSpan() << std::endl;
+        std::cout << sp.longestSpan() << std::endl;
+
         // using addRange memeber function
         std::vector<int> v;
         v.push_back(6);
