@@ -7,6 +7,7 @@
 #include <fstream>
 #include <map>
 #include <sstream>
+#include <ctime>
 
 class BitcoinExchange{
     public:

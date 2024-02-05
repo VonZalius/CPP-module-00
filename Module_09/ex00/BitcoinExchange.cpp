@@ -55,6 +55,32 @@ BitcoinExchange::~BitcoinExchange( void )
 
 //ex00
 
+int date_check(const std::string& dateString) {
+    //std::cout << "Test : time beginning " << dateString << std::endl;
+
+    struct tm parsedDate;
+    memset(&parsedDate, 0, sizeof(parsedDate)); // Initialiser la structure à zéro
+
+    // Utiliser strptime pour analyser la date
+    if (strptime(dateString.c_str(), "%Y-%m-%d", &parsedDate) == NULL)
+        return 0;
+
+    // Normaliser la structure tm
+    parsedDate.tm_isdst = -1; // -1 signifie que l'information sur l'heure d'été est inconnue
+    time_t given_time = mktime(&parsedDate);
+
+    //std::cout << "Test : time end" << std::endl;
+
+    struct tm start = {0, 0, 0, 2, 0, 109, 0, 0, 0, 0, 0}; // 2009-01-02
+    struct tm end = {0, 0, 0, 29, 2, 122, 0, 0, 0, 0, 0};  // 2022-03-29
+
+    // Conversion des dates en time_t pour la comparaison
+    time_t start_time = mktime(&start);
+    time_t end_time = mktime(&end);
+
+    return (given_time >= start_time && given_time <= end_time);
+}
+
 void BitcoinExchange::run(const std::string& filename)
 {
     try
@@ -78,6 +104,8 @@ void BitcoinExchange::run(const std::string& filename)
                 std::cout << "Error : value too big" << std::endl;
             else if(value < 0)
                 std::cout << "Error : value cant be < 0" << std::endl;
+            else if (!date_check(date))
+                std::cout << "Error : not a good date" << std::endl;
             else
             {
                 double final;
